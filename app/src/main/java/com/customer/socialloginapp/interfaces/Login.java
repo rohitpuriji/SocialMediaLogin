@@ -16,4 +16,5 @@ public interface Login {
      * @param mCallbackManager
      */
     void doLogin(ActivityWelcomeBinding mBinding, AppCompatActivity mContext, CallbackManager mCallbackManager);
+
 }

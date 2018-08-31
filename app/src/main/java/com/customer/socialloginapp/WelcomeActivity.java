@@ -32,14 +32,12 @@ public class WelcomeActivity extends AppCompatActivity {
         mLoginManagerFactory = new LoginManagerFactory();
 
         mBinding.imgGoogle.setOnClickListener(view -> {
-            Login googleLogin = mLoginManagerFactory.getData("google");
-            googleLogin.doLogin(mBinding,WelcomeActivity.this,null);
+            mLoginManagerFactory.getData("google").doLogin(mBinding,WelcomeActivity.this,null);
 
         });
 
         mBinding.imgFacebook.setOnClickListener(view -> {
-            Login fbLogin = mLoginManagerFactory.getData("facebook");
-            fbLogin.doLogin(mBinding,WelcomeActivity.this,null);
+            mLoginManagerFactory.getData("facebook").doLogin(mBinding,WelcomeActivity.this,null);
         });
 
         mBinding.textView.setOnClickListener(view -> signOut());
